@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <script src="https://kit.fontawesome.com/14dea2b7a9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/homepage.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div id="header">
+        <form action="/logout" method="get|post" style="display:inline;">
+          <button type="submit" class="button">Logout</button>
+        </form>
+        <a href="/users">Users</a>
+        <a href="/birthcertificate">Add</a>
+      </div>
+      <div id="bodyContent">
+        <main>
+          <section id="search-section">
+            <form action="/search" method="GET" id="searchForm">
+              <input type="text" name="query" placeholder="Search..." />
+              <button type="submit">Search</button>
+            </form>
+          </section>
+          <h2>Total number of records: {{ total }}</h2>
+          <section id="data-section">
+            <h1>Data</h1>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Gender</th>
+                  <th>Issuedate</th>
+                  <th>Fathername</th>
+                  <th>Mothername</th>
+                  <th>Date of birth</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for item in items %}
+                  <tr>
+                    <td>{{ item[1] }}</td>
+                    <td>{{ item[2] }}</td>
+                    <td>{{ item[3] }}</td>
+                    <td>{{ item[4] }}</td>
+                    <td>{{ item[5] }}</td>
+                    <td>{{ item[6] }}</td>
+                    <td>
+                      <a href="{{ url_for('update', item_id=item[0]) }}" class="action-button update">Update</a>
+                      <a href="{{ url_for('delete', item_id=item[0]) }}" class="action-button delete">Delete</a>
+                      <a href="{{ url_for('viewbirthcertificate', item_id=item[0]) }}" class="action-button view">View</a>
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

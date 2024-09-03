@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birth Certificate View</title>
+    <link rel="stylesheet" href="../static/view.css">
+</head>
+<body>
+    <div class="main">
+        <div id="header">
+            <form action="/logout" method="get|post" style="display:inline;">
+            <button type="submit" class="button">Logout</button>
+            </form>
+            <a href="/home">Home</a>
+            <a href="/users">Users</a>
+            <a href="/birthcertificate">Add</a>
+        </div>
+        <section id="search-section">
+            <form action="/search" method="GET" id="searchForm">
+                <input type="text" name="query" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <div class="title"><h1>BIRTH CERTIFICATE</h1></div>
+        <div class="date">
+            <h3>Certificate No.: {{certificate_no}}</h3>
+            <h3>Issue Date: {{issue_date}}</h3>
+        </div>
+        <div class="paragraph">
+            <p>According to the Birth Registration Book prepared on the basis of form of
+                Schedule 2 filled by indicative Mr./Mrs. <strong>{{registrar}}</strong> in this office it is 
+                certified that the grand{{gender}} of Mr. <strong>{{grandfather}}</strong>
+                the {{gender}} of Mr. <strong>{{father}}</strong> and Mrs. <strong>{{mother}}</strong> 
+                Mr./Miss. <strong>{{fullname}}</strong> living in <strong>{{district}}</strong> district <strong>{{muni_vdc_name}}</strong>
+                {{muni_vdc}}
+                 ward no. <strong>{{wardno}}</strong> was born in 
+                <strong>{{date}}</strong> at <strong>{{district}}</strong> district
+                <strong>{{muni_vdc_name}}</strong> {{muni_vdc}} ward no. <strong>{{wardno}}</strong>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

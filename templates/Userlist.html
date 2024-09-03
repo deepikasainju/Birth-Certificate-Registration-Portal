@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User List</title>
+    <link rel="stylesheet" href="static/user.css">
+</head>
+<body>
+    <div id="main">
+    <div id="header">
+         <form action="/logout" method="get|post" style="display:inline;">
+             <button type="submit" class="button">Logout</button>
+        </form>
+        <a href="/home">Home</a>
+    </div>
+
+    <section id="user-data">
+        <h1>User Data</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>S.N.</th>
+                    <th>User</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in items %}
+                    <tr>
+                        <td>{{ item[0] }}</td>
+                        <td>{{ item[1] }}</td>
+                        <td>{{ item[2] }}</td>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+</div>
+</body>
+</html>

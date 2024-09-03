@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birth certificate issue</title>
+  <link rel="stylesheet" href="../static/update.css">
+
+</head>
+
+<body>
+  <div class="hero">
+    <div id="header">
+      <form action="/logout" method="get|post" style="display:inline;">
+      <button type="submit" class="button">Logout</button>
+      </form>
+      <a href="/home">Home</a>
+      <a href="/users">Users</a>
+      <a href="/birthcertificate">Add</a>
+    </div>
+    <div class="head">
+      <h1 style="text-align: center;">Birth Certificate Registration Form</h1>
+    </div>
+    <form method="post" action="/registerbirthcertificate" enctype="multipart/form-data">
+      <div class="container">
+        <!-- <div class="left"> -->
+        <div class="flex-child">
+          <label for="issueddate">Issue date</label></br>
+          <input type="date" name="issueddate"></br></br>
+          <label>Full Name of Child:</label><br />
+          <input type="text" id="name" name="name" placeholder="Enter full name" required /><br /><br />
+          <label>Father Name:</label><br />
+          <input type="text" name="fathername" id="fathername" placeholder="Enter father's full name"
+            required /><br /><br />
+          <label>Mother Name:</label><br />
+          <input type="text" name="mothername" id="mothername" placeholder="Enter mother's full name"
+            required /><br /><br />
+          <label>Grandfather Name:</label><br />
+          <input type="text" name="grandfathername" id="grandfathername" placeholder="Enter Grandfather's full name"
+            required /><br /><br />
+          <label>Gender:</label> <br />
+          <input type="radio" id="male" name="gender" value="son" required />
+          Male<br />
+          <input type="radio" id="female" name="gender" value="daughter" required />
+          Female<br /><br>
+          <label> Date of Birth:</label><br />
+          <input type="date" id="dob" name="dob" /><br /><br />
+        </div>
+
+        <!-- <div class="right"> -->
+        <div class="flex-child">
+          <label>Registrar name</label></br>
+          <input type="text" name="registrarname" placeholder="Enter registrar name"></br></br>
+          <label>Zone:</label><br />
+          <select id="zone" name="zone">
+            <option value="Koshi">Koshi</option>
+            <option value="Madhesh">Madhesh</option>
+            <option value="Bagmati">Bagmati</option>
+            <option value="Gandaki">Gandaki</option>
+            <option value="Lumbini">Lumbini</option>
+            <option value="Karnali">Karnali</option>
+            <option value="Sudurpashchim">Sudurpashchim</option>
+          </select><br /><br />
+          <label>District:</label><br />
+
+
+          <input type="text" id="district" name="district" placeholder="Enter your District" required /><br /><br />
+          <label> Municipality/VDC:</label><br />
+          <input type="radio" id="mun" name="muni_vdc" value="Municipality" required />Municipality<br />
+          <input type="radio" id="vdc" name="muni_vdc" value="VDC" required />VDC<br /><br />
+          <label> Municipality/VDC Name:</label><br />
+          <input type="text" name="muni_vdc_name"  placeholder="Enter Municipality/VDC Name" required /><br /><br />
+          <label> Ward No:</label><br />
+
+          <input type="number" id="wardno" name="ward_no" placeholder="Enter ward number" required /><br /><br />
+          <label class="file-input"> Upload Marriage Certificate <br />
+            <input type="file" name="marriage_certificate" id="marriage" required /><br /><br />
+          </label>
+          
+
+
+          <!-- </div> -->
+        </div>
+
+      </div>
+      <div style="align-items: center; margin-left: 50%;
+            margin-bottom: 20px;">
+        <input type="submit" value="Submit" id="button" />
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

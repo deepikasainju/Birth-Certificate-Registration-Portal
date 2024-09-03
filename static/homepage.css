@@ -1,0 +1,156 @@
+body, h1, h2, form, table {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  #main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  #header {
+    background-color: #34495e;
+    padding: 15px;
+    text-align: right;
+  }
+  
+  #header a, #header button {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  #header button {
+    background: none;
+    border: 1px solid #ecf0f1;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  #header button:hover {
+    background-color: #ecf0f1;
+    color: #34495e;
+    transform: scale(1.1);
+    border-radius: 5px;
+  }
+  
+  #header a:hover {
+    color: #ff6347; /* Change text color on hover */
+  }
+  
+  #bodyContent {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  #search-section {
+    margin-bottom: 20px;
+  }
+  
+  #searchForm {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  
+  #searchForm input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    margin-right: 10px;
+  }
+  
+  #searchForm button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  #searchForm button:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #a6c7f1; /* Light border color */
+  }
+  
+  thead {
+    background-color: #34495e;
+    color: #ecf0f1;
+  }
+  
+  th, td {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Light border color */
+  }
+  
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .action-button {
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-right: 5px;
+    color: #fff;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .action-button.update {
+    background-color: #2ecc71;
+  }
+  
+  .action-button.update:hover {
+    background-color: #27ae60;
+    transform: scale(1.1);
+  }
+  
+  .action-button.delete {
+    background-color: #e74c3c;
+  }
+  
+  .action-button.delete:hover {
+    background-color: #c0392b;
+    transform: scale(1.1);
+  }
+  
+  .action-button.view {
+    background-color: #3498db;
+  }
+  
+  .action-button.view:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+  }
+  
+  h2 {
+    margin: 5rem 0;
+    color: #2c3e50;
+  }
+  #data-section h1 {
+    text-align: center;
+  }
+  
+  
